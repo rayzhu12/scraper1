@@ -9,4 +9,5 @@ soup = BeautifulSoup(html)
 table = soup.find('tbody', attrs={'class': 'stripe'})
 
 for row in table.findAll('tr'):
-    print row.prettify()
+    for cell in row.findAll('td'):
+        print cell.text
