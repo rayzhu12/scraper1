@@ -6,4 +6,5 @@ response = requests.get(url)
 html = response.content
 
 soup = BeautifulSoup(html)
-print soup.prettify()
+table = soup.find('tbody', attrs={'class': 'stripe'})
+print table.prettify()
