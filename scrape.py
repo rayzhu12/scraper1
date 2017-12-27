@@ -10,4 +10,4 @@ table = soup.find('tbody', attrs={'class': 'stripe'})
 
 for row in table.findAll('tr'):
     for cell in row.findAll('td'):
-        print cell.text
+        print cell.text.replace('&nbsp;', '')
